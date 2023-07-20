@@ -1,33 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+import NewTodo from './components/NewTodo'
+import TodoList from './components/TodoList'
+const DUMMY_TODOS = [
+  {id: 1, title: "Ir a trotar", description: "Primera tarea del dia"},
+  {id: 2, title: "Desayunar", description: "Comer un rico desayuno"},
+  {id: 3, title: "Trabajar", description: "Trabajar como QA"}
+]
+const App = () => {
+  const [todos, setTodos] = useState(DUMMY_TODOS)
+  const addTodoHandler = (title, description) => {
+    const newTodo = {id: Date.now(), title: title, description: description}
+    setTodos([...todos, newTodo])
+  }
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NewTodo onAddTodo={addTodoHandler}/>
+      <TodoList todos={todos}/>
     </>
   )
 }
