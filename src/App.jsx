@@ -13,10 +13,15 @@ const App = () => {
     const newTodo = {id: Date.now(), title: title, description: description}
     setTodos([...todos, newTodo])
   }
+  const removeTodoHandler = (todoId) => {
+    setTodos((prevState) => {
+      return prevState.filter(todo => todo.id !== todoId)
+    })
+  }
   return (
     <>
       <NewTodo onAddTodo={addTodoHandler}/>
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} onRemoveTodo={removeTodoHandler}/>
     </>
   )
 }

@@ -10,7 +10,7 @@ const TodoList = (props) => {
                   <h1 className='todo__title'>{todo.title}</h1>
                   <p className='todo_description'>{todo.description}</p>
                   <div className="todo__actions">
-                    <button type='button' className='todo__action'>Delete Todo</button>
+                    <button type='button' className='todo__action' onClick={() => props.onRemoveTodo(todo.id)}>Delete Todo</button>
                   </div>
                 </div>
             ))}
