@@ -10,10 +10,22 @@ const NewTodo = (props) => {
 
     
     const titleChangeHandler = (event) => {
+        if (event.target.value.trim().length > 0) {
+            setEnteredTitleIsValid(true)
+        }
+        else {
+            setEnteredTitleIsValid(false)
+        }
         setEnteredTitle(event.target.value)
     }
 
     const descriptionChangeHandler = (event) => {
+        if (event.target.value.trim().length > 0) {
+            setEnteredDescriptionIsValid(true)
+        }
+        else {
+            setEnteredDescriptionIsValid(false)
+        }
         setEnteredDescription(event.target.value)
     }
 
