@@ -19,3 +19,7 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.todo_description {
+    margin: 0 2rem;
+}

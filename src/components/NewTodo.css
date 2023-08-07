@@ -1,7 +1,6 @@
 .new-todo {
     background-color: purple;
     padding: 1rem;
-    width: 40rem;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
