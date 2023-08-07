@@ -58,11 +58,11 @@ const NewTodo = (props) => {
             <form action="" onSubmit={submitHandler}>
                 <div className="form-group">
                     <label style={{ color: !enteredTitleIsValid ? 'red' : 'green'}} htmlFor="title">Title</label>
-                    <input style={{backgroundColor: !enteredTitleIsValid ? 'red': 'green'}} type="text" id="title" value={enteredTitle} onChange={titleChangeHandler} />
+                    <input style={{backgroundColor: !enteredTitleIsValid ? 'red': 'white'}} type="text" id="title" value={enteredTitle} onChange={titleChangeHandler} />
                 </div>
                 <div className="form-group">
                     <label style={{color: !enteredDescriptionIsValid ? 'red': 'green'}} htmlFor="description">Description</label>
-                    <input style={{backgroundColor: !enteredDescriptionIsValid ? 'red' : 'green'}} type="text" id="description" value={enteredDescription} onChange={descriptionChangeHandler}/>
+                    <input style={{backgroundColor: !enteredDescriptionIsValid ? 'red' : 'white'}} type="text" id="description" value={enteredDescription} onChange={descriptionChangeHandler}/>
                 </div>
                 <button type="submit" className='button'>Create todo</button>
             </form>

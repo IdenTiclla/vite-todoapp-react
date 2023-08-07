@@ -1,16 +1,23 @@
 .new-todo {
     background-color: purple;
     padding: 1rem;
+    width: 40rem;
+    border-radius: 12px;
 }
 .form-group label {
     text-align: left;
     font-weight: bold;
+    font-size: 1.2rem;
 }
+
 .form-group input {
     margin-bottom: 1rem;
     font:inherit;
     background-color: white;
     color: black;
+    border-radius: 12px;
+    padding: 0.5rem;
+    
 }
 
 .form-group label,
@@ -21,4 +28,6 @@
 
 .button {
     width: 100%;
+    font: inherit;
+    font-size: 1.2rem;
 }
