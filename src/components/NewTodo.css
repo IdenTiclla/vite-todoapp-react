@@ -3,6 +3,8 @@
     padding: 1rem;
     width: 40rem;
     border-radius: 12px;
+    display: flex;
+    flex-direction: column;
 }
 .form-group label {
     text-align: left;
